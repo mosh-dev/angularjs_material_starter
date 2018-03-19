@@ -3,4 +3,4 @@ This is a AngularJs Starter project, Including Material Library, Angular chart a
 
 Installation
 
-Run 'npm install' and enjoy
+Run   `npm install` and the project is Ready to go

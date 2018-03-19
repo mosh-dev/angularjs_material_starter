@@ -1,0 +1,26 @@
+[ 
+    { 
+        "name"  : "DashBoard",
+        "state" : "home.dash",
+        "icon"  : "ic_attach_file_24px.svg",
+        "items" : [] 
+    },
+
+    
+    { 
+        "name"  : "Example Menu 2",
+        "state" : "home.dash",
+        "icon"  : "ic_insert_chart_24px.svg",
+        "items" : [] 
+    },
+
+    { 
+        "name"  : "Example Menu 3",
+        "state" : "home.dash",
+        "icon"  : "ic_apps_24px.svg",
+        "items" : [ { "name":"Submenu 1" },
+                    { "name":"Submenu 2" },
+                    { "name":"Submenu 2" } ] 
+    }
+
+]

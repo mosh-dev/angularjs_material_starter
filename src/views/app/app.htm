@@ -1,0 +1,102 @@
+<!-- MAIN TOOLBAR -->
+<md-toolbar ng-cloak>
+
+    <div class="md-toolbar-tools">
+        <md-button hide-gt-sm class="md-icon-button" aria-label="Menu Toggle" ng-click="toggle()">
+            <md-icon md-svg-icon="assets/icons/ic_menu_24px.svg"></md-icon>
+        </md-button>
+        <a class="domain_name" ng-click="goto('home.dash')" ><b>Material</b> Admin</a>
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="social:notifications-on"></md-icon>
+        </md-button>
+
+        <!-- Avatar Action Menu Popup -->
+
+        <md-menu md-position-mode="target-right bottom">
+            
+            <md-button class="avatar" aria-label="profile" ng-click="$mdOpenMenu($event)">
+                <md-list-item>
+                    <img class="avatar_thumb" ng-src="assets/img/avatar.jpeg"/>
+                    <p>Jhon</p>
+                </md-list-item>
+            </md-button>
+
+
+            <md-menu-content width="5">
+                
+                <md-list-item class="md-2-line">
+                    <img ng-src="assets/img/avatar.jpeg" class="md-avatar"/>
+                    <div class="md-list-item-text">
+                        <h3>Example Name</h3>
+                        <h4>example@gmail.com</h4>
+                    </div>
+                </md-list-item>
+
+                <md-divider></md-divider>
+
+                <md-menu-item>
+                    <md-button layout-fill md-ink-ripple>
+                        <md-icon md-menu-align-target md-svg-icon="social:notifications-on"></md-icon> My Account
+                    </md-button>
+                </md-menu-item>
+
+                <md-menu-item>
+                    <md-button layout-fill md-ink-ripple>
+                        <md-icon md-menu-align-target></md-icon>Log Out
+                    </md-button>
+                </md-menu-item>
+
+            </md-menu-content>
+
+        </md-menu>
+
+
+
+    </div>
+</md-toolbar>
+
+
+
+<div ng-if="!locked" layout="row" flex ng-cloak>
+    <!-- SIDENAV -->
+    <md-sidenav layout="column" md-is-locked-open="$mdMedia('gt-sm')" class="md-sidenav-left" md-component-id="left">
+        <md-list ng-repeat="menu in menus" class="no_padding menu_container">
+
+            <!-- MAIN MENU ITEMS -->
+            <md-list-item  
+                ng-click="parentMenuAction(menu)"
+                class="menu_item"
+                ng-class="{active: menu === activeMenu}">
+                    <md-icon md-svg-icon="assets/icons/{{menu.icon}}"></md-icon>
+                    <p>{{menu.name}}</p>
+                    <span flex></span>
+                    <md-icon
+                        md-svg-icon="assets/icons/ic_keyboard_arrow_right_24px.svg"
+                        ng-click="parentMenuAction(menu)"
+                        ng-show="menu.items.length != 0"
+                        class="nav_icon md-toggle-icon"
+                        aria-hidden="true">
+                    </md-icon>
+            </md-list-item>
+            <!-- SUB MENU ITEMS -->
+            <md-list-item 
+                ng-repeat="item in menu.items"
+                ng-click="chieldMenuAction(item)"
+                ng-show="menu === activeMenu"
+                class="sub_menu_item"
+                ng-class="{'sub_active': item === activeSubMenu}">
+                    <p>{{item.name}}</p>
+            </md-list-item>
+
+        </md-list>
+    </md-sidenav>
+
+
+    <md-content layout="column" flex>
+        <ui-view><!-- WHERE CONTENT WILL BE LOADED --></ui-view>
+    </md-content>
+
+
+</div>

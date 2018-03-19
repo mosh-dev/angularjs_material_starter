@@ -1,0 +1,34 @@
+body { overflow: hidden; font-size: 13px }
+
+.no_padding { padding: 0 }
+
+
+/* Accordion SideNav ======================================================== */
+
+.menu_container md-list-item { min-height: 38px; height: 42px }
+.nav_icon { transition: transform 300ms }
+.active { background-color: #546e7a; color: #dedede }
+.active .nav_icon { transform: rotateZ(90deg); color: #dedede }
+.active md-icon, .active p { color: #dedede }
+.menu_item p { font-size: 12px; font-weight: 500; }
+.sub_menu_item p { padding-left: 12px; font-size: 12px }
+.sub_active p { color: #6ab344 }
+
+/* END Accordion SideNav ==================================================== */
+
+
+
+/* Main Toolbar Avatar ======================================================= */
+
+.avatar_thumb { border-radius: 50%; width: 32px; margin-right: 8px }
+.avatar p { 
+  text-transform: none; 
+  font-weight: lighter; 
+  font-size: 16px; 
+  text-shadow: 1px 1px 1px #504d4d 
+}
+.avatar { padding: 0px }
+
+/* END Main Toolbar Avatar ==================================================== */
+
+

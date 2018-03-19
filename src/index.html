@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Angular Mat Starter</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/roboto.css">
+    <link  rel="stylesheet" type="text/css" href="assets/fonts/mat_icon/meterial-icon.css">
+
+    <!-- PACKAGES USED FROM NPM ================================================================= -->
+    <script type="text/javascript" src="../node_modules/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="../node_modules/lodash/lodash.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="../node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-material-icons/angular-material-icons.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-material/angular-material.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../node_modules/angular-material/angular-material.min.css">
+    <script type="text/javascript" src="../node_modules/angular-material-data-table/dist/md-data-table.min.js"></script>
+    <script type="text/javascript" src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+
+
+    <!-- ===================== APPLICATION STYLESHEETS ================================ -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <link rel="stylesheet" href="css/md-data-table_custom.css">
+
+
+
+    <!-- ======================== Application Js Files ====================================== -->
+    <script type="text/javascript" src="app/myApp.js"></script>
+
+    <!-- ============================= CONFIGS ============================================== -->
+    <script type="text/javascript" src="app/configs/configs.js"></script>
+    <script type="text/javascript" src="app/configs/iconConfig.js"></script>
+    <script type="text/javascript" src="app/configs/themeConfig.js"></script>
+
+    <!-- ============================= FILTERS ============================================== -->
+    <script type="text/javascript" src="app/filters.js"></script>
+
+    <!-- ============================= SERVICES ============================================== -->
+    <script type="text/javascript" src="app/services/services.js"></script>
+
+    <!-- ============================= CONTROLLERS ============================================== -->
+    <script type="text/javascript" src="app/controllers/loginController.js"></script>
+    <script type="text/javascript" src="app/controllers/appController.js"></script>
+
+
+  </head>
+
+  <body ng-app="myApp" layout="row">
+    <ui-view layout="column" flex></ui-view>
+  </body>
+
+</html>
